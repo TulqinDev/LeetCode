@@ -24,12 +24,30 @@ Output: [0,1]
 """
 
 
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        value_index = {}  # qiymat , index
+# 1 - solution.
+def twoNumberSum(array, targetSum):
+    for i in range(len(array)):
+        for j in range(i + 1, len(array)):
+            if array[i] + array[j] == targetSum:
+                return sorted([array[i], array[j]])
 
-        for i, number in enumerate(nums):
-            if target - number in value_index:
-                return [i, value_index[target - number]]
+    return []
 
-            value_index[number] = i
+
+# 2 - solution
+def twoNumberSum2(array, targetSum):
+    array.sort()
+    left = 0
+    right = len(array) - 1
+
+    while left < right:
+        CurrentSum = array[left] + array[right]
+
+        if CurrentSum == targetSum:
+            return sorted([array[left], array[right]])
+        elif CurrentSum < targetSum:
+            left += 1
+        else:
+            right -= 1
+
+    return []
