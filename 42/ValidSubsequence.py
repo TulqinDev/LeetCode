@@ -19,7 +19,7 @@ def isValidSubsequence(array, sequence):
         if seq_index == len(sequence):
             break
 
-        if seq_index == array[value]:
+        if value == sequence[seq_index]:
             seq_index += 1
 
     return seq_index == len(sequence)
