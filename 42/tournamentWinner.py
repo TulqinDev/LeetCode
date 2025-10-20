@@ -23,7 +23,6 @@ Tushuntirish:  C# — HTML ni yengdi, Python — C# ni yengdi, Python — HTML n
  Python — 6 ball
 
 """
-from idlelib.window import add_windows_to_menu
 
 
 def tournamentWinner(competitions, results):
